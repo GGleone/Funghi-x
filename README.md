@@ -1,4 +1,7 @@
 # progetto-x
-porta fortuna
-speriamo 
-cambiamo ancora
+
+8124 campioni
+22 attributi categorici
+Target:
+    e = edible
+    p = poisonous
