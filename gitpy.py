@@ -1,2 +1,3 @@
-# è solo un altra prova 
-#riproviamo
+# cosa rende un fungo velenoso?
+
+import numpy 
