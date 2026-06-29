@@ -1,5 +1,5 @@
 # cosa rende un fungo velenoso?
-#tanto per
+#tanto per lavoro
 
 import numpy 
 import pandas as pd
