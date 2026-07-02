@@ -1,12 +1,13 @@
 # cosa rende un fungo velenoso?
 #tanto per lavoro
 
-import numpy 
+import numpy  #inutilizzato per ora
 import pandas as pd
 
-file = open("dataset/mushrooms.csv", "r") #chissa se funziona 
-df = pd.DataFrame(file)
+# non c'è bisogno di questa riga >>> with open("dataset/mushrooms.csv", "r") as f:
+    #file= pd.read_csv(f)
+df = pd.read_csv("dataset/mushrooms.csv") #aprire il file csv
 
-df.info()
+df.info()   #info su colonnee righe
 
-df.isnull().sum()
+print(df.isnull().sum())    #conta i valori mancanti per ogni colonna 
