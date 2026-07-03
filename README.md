@@ -1,5 +1,4 @@
 # progetto-x
-c'è ancora da lavorarci molto 
 
 
 8124 campioni
