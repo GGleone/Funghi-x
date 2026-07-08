@@ -4,6 +4,7 @@
 import numpy as np #inutilizzato per ora
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OrdinalEncoder
 
 # non c'è bisogno di questa riga >>> with open("dataset/mushrooms.csv", "r") as f:
     #file= pd.read_csv(f)
@@ -45,4 +46,12 @@ print(df_primo.shape)
 #siamo apassati da 22 a 117 colonne
 
 #da rifare il label encoding per tutte le features
+#proviamo questo ordinal encoder
+oe = OrdinalEncoder()
+df_primo= oe.fit_transform(df_primo)
 
+#df_primo.head()       head() non funziona su numpy array
+print(df_primo[:5])
+#tanto per vederlo con pandas convertiamolo e poi facciamo head()
+jim= pd.DataFrame(df_primo)
+print(jim.head())
