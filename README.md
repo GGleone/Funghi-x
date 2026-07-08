@@ -1,5 +1,5 @@
 # progetto-x
-domani inserisco qualcosa di utile
+ML per vedere chi è velenoso
 
 8124 campioni
 22 attributi categorici
