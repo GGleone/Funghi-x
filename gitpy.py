@@ -46,9 +46,9 @@ print(df_primo.shape)
 #siamo apassati da 22 a 117 colonne
 
 #da rifare il label encoding per tutte le features
-#proviamo questo ordinal encoder
-oe = OrdinalEncoder()
-df_primo= oe.fit_transform(df_primo)
+#proviamo questo ordinal encoder            alla fine non era da fare se facevo ohe
+#oe = OrdinalEncoder()
+#df_primo= oe.fit_transform(df_primo)
 
 #df_primo.head()       head() non funziona su numpy array
 print(df_primo[:5])
