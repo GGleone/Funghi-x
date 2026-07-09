@@ -5,6 +5,9 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 #from sklearn.preprocessing import OrdinalEncoder
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
 
 # non c'è bisogno di questa riga >>> with open("dataset/mushrooms.csv", "r") as f:
     #file= pd.read_csv(f)
@@ -79,3 +82,27 @@ lrm=LinearRegressionMia()
 lrm.fit(df_primo[1]df_primo[0])
 print(lrm.predici(True))
 """  #non funziona perche ho troppe features e dovrei fare regresione lineare multipla e non semplice
+#proviamo con scikit
+
+#print(df_primo["class"])
+
+
+# Rimuove la colonna target e trasforma tutto il resto in X_train
+X_train = df_primo.drop(columns=["class"]).values
+
+# Prende solo la colonna target per y_train
+y_train = df_primo["class"].values
+
+lr= LinearRegression()
+lr.fit(X_train,y_train)
+y_predic = lr.predict(X_train)
+
+mse=mean_squared_error(y_train,y_predic)
+mae=mean_absolute_error(y_train,y_predic)
+r2=r2_score(y_train,y_predic)
+
+print(mse,mae,r2)
+""" 
+cmq linearregression non serve per classificare e questo dataset è da classificare
+infatti r2 =1 non va bene 
+"""
